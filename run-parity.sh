@@ -37,4 +37,4 @@ echo "Waiting ${RESTART_INTERVAL} before starting it again..."
 echo ""
 
 sleep ${RESTART_INTERVAL}
-exec "$0" "$@"
+exec "./run-parity.sh" "$@"
