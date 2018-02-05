@@ -33,7 +33,7 @@ parity \
 # If parity died, give the server some time and then restart it.
 echo ""
 echo "Looks like the node has died."
-echo "Waiting ${RESTART_INTERVAL} before starting it again..."
+echo "Waiting ${RESTART_INTERVAL} seconds before starting it again..."
 echo ""
 
 sleep ${RESTART_INTERVAL}
