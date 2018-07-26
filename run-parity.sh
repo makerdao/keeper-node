@@ -27,6 +27,9 @@ parity \
     --force-ui \
     --no-periodic-snapshot \
     --mode=active \
+    --cache-size=4096 \
+    --jsonrpc-threads=12 \
+    --jsonrpc-server-threads=12 \
     --unlock ${ACCOUNTS_COMMA_SEPARATED} \
     --password ${PASSWORD_FILE}
 
