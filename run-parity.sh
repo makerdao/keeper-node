@@ -24,9 +24,7 @@ echo "Starting parity..."
 echo ""
 
 parity \
-    --force-ui \
     --no-periodic-snapshot \
-    --mode=active \
     --cache-size=4096 \
     --jsonrpc-threads=12 \
     --jsonrpc-server-threads=12 \
