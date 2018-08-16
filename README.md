@@ -14,6 +14,9 @@ NOTE: If you do not have an account, you will need to create an account with `pa
 sudo apt-get install jshon
 ./run-parity.sh
 ```
+## Regenerate Parity Config
+https://paritytech.github.io/parity-config-generator/
+
  ## Support
 <https://chat.makerdao.com/channel/keeper>
 
