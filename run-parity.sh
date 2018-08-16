@@ -3,13 +3,7 @@
 cd "$(dirname "$0")"
 
 # Configuration
-export PASSWORD_FILE=./password
 export RESTART_INTERVAL=60
-
-if [ ! -f ${PASSWORD_FILE} ]; then
-    echo "File '${PASSWORD_FILE}' with the account unlock password must exist!"
-    exit -1
-fi
 
 # Enumerate accounts
 export KEYS_DIRECTORY=$HOME/.local/share/io.parity.ethereum/keys/ethereum/
@@ -23,15 +17,7 @@ echo "Account addresses: ${ACCOUNTS_COMMA_SEPARATED}"
 echo "Starting parity..."
 echo ""
 
-parity \
-    --force-ui \
-    --no-periodic-snapshot \
-    --mode=active \
-    --cache-size=4096 \
-    --jsonrpc-threads=12 \
-    --jsonrpc-server-threads=12 \
-    --unlock ${ACCOUNTS_COMMA_SEPARATED} \
-    --password ${PASSWORD_FILE}
+parity
 
 # If parity died, give the server some time and then restart it.
 echo ""
