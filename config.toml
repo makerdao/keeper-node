@@ -1,0 +1,22 @@
+# This config should be placed in following path:
+#   ~/.local/share/io.parity.ethereum/config.toml
+
+[account]
+# From: [0x000000000000] you'll be able to send transactions without password.
+unlock = ["0x000000000000"]
+# File at ./password should contain passwords to unlock your accounts. One password per line.
+password = ["./password"]
+
+[rpc]
+# Threads for handling incoming connections for HTTP JSON-RPC server.
+server_threads = 12
+# Turn on additional processing threads in all HTTP JSON-RPC servers. Setting this to non-zero value allows parallel execution of cpu-heavy queries.
+processing_threads = 12
+
+[footprint]
+# Will keep up to 4096MB data in Database cache.
+cache_size_db = 4096
+
+[snapshots]
+# Disables automatic periodic snapshots.
+disable_periodic = true
